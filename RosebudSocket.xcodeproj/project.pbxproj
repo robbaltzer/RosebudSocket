@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E58F92D17130343004933BF /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E58F92C17130343004933BF /* AsyncSocket.m */; };
+		3E58F93117130438004933BF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E58F93017130438004933BF /* CFNetwork.framework */; };
 		3ECD051617108EA100A47F57 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECD051517108EA100A47F57 /* UIKit.framework */; };
 		3ECD051817108EA100A47F57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECD051717108EA100A47F57 /* Foundation.framework */; };
 		3ECD051A17108EA100A47F57 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECD051917108EA100A47F57 /* CoreGraphics.framework */; };
@@ -21,6 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E58F929171302FF004933BF /* Trace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Trace.h; sourceTree = "<group>"; };
+		3E58F92A171302FF004933BF /* Trace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Trace.m; sourceTree = "<group>"; };
+		3E58F92B17130343004933BF /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
+		3E58F92C17130343004933BF /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
+		3E58F92E1713035D004933BF /* SocketControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocketControl.h; sourceTree = "<group>"; };
+		3E58F92F1713035D004933BF /* SocketControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocketControl.m; sourceTree = "<group>"; };
+		3E58F93017130438004933BF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		3ECD051217108EA100A47F57 /* RosebudSocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RosebudSocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ECD051517108EA100A47F57 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3ECD051717108EA100A47F57 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -44,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E58F93117130438004933BF /* CFNetwork.framework in Frameworks */,
 				3ECD051617108EA100A47F57 /* UIKit.framework in Frameworks */,
 				3ECD051817108EA100A47F57 /* Foundation.framework in Frameworks */,
 				3ECD051A17108EA100A47F57 /* CoreGraphics.framework in Frameworks */,
@@ -56,6 +66,7 @@
 		3ECD050917108EA100A47F57 = {
 			isa = PBXGroup;
 			children = (
+				3E58F93017130438004933BF /* CFNetwork.framework */,
 				3ECD051B17108EA100A47F57 /* RosebudSocket */,
 				3ECD051417108EA100A47F57 /* Frameworks */,
 				3ECD051317108EA100A47F57 /* Products */,
@@ -83,8 +94,14 @@
 		3ECD051B17108EA100A47F57 /* RosebudSocket */ = {
 			isa = PBXGroup;
 			children = (
+				3E58F92B17130343004933BF /* AsyncSocket.h */,
+				3E58F92C17130343004933BF /* AsyncSocket.m */,
 				3ECD052417108EA100A47F57 /* AppDelegate.h */,
+				3E58F929171302FF004933BF /* Trace.h */,
+				3E58F92A171302FF004933BF /* Trace.m */,
 				3ECD052517108EA100A47F57 /* AppDelegate.m */,
+				3E58F92E1713035D004933BF /* SocketControl.h */,
+				3E58F92F1713035D004933BF /* SocketControl.m */,
 				3ECD052D17108EA100A47F57 /* MainStoryboard.storyboard */,
 				3ECD053017108EA100A47F57 /* ViewController.h */,
 				3ECD053117108EA100A47F57 /* ViewController.m */,
@@ -176,6 +193,7 @@
 				3ECD052217108EA100A47F57 /* main.m in Sources */,
 				3ECD052617108EA100A47F57 /* AppDelegate.m in Sources */,
 				3ECD053217108EA100A47F57 /* ViewController.m in Sources */,
+				3E58F92D17130343004933BF /* AsyncSocket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +316,7 @@
 				3ECD053717108EA100A47F57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

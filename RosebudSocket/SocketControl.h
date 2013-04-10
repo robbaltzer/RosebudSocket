@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-//#import "SendPacket.h"
 #import "Types.h"
 
 @class AsyncSocket;
@@ -19,8 +18,6 @@
     Trace* trace;
 	BOOL isRunning;
     int port;
-//    SendPacket* sendPacket;
-//    EASessionController* eaSessionController;
 }
 
 @property (nonatomic, strong) AsyncSocket *listenSocket;

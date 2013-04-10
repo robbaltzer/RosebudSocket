@@ -11,6 +11,8 @@
 #import "ViewController.h"
 #import "AppDelegate.h"
 
+#define DEFAULT_PORT 8377
+
 @interface ViewController ()
 
 @end
@@ -26,12 +28,13 @@
     [labelVersion setText:appVersion];
     [self.labelIPAddress setText:[self getIPAddress]];
     trace = ApplicationDelegate.trace;
-    
+    socketControl = ApplicationDelegate.socketControl;
     [trace setTextView: self.textViewTrace];
     [trace clear];
     [trace update];
     [trace trace:@"Trace up and running"];
-	// Do any additional setup after loading the view, typically from a nib.
+    [socketControl setPort:DEFAULT_PORT];
+    [socketControl rxStartServer];
 }
 
 - (void)didReceiveMemoryWarning

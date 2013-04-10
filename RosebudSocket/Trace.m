@@ -48,8 +48,9 @@
 
     NSDate *today = [NSDate date];
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"[MM-dd hh:mm:ss:SSS a] "];
-    NSString *dateString = [dateFormat stringFromDate:today];
+//    [[dateFormat setDateFormat:@"[MM-dd hh:mm:ss:SSS a] "];
+    [dateFormat setDateFormat:@"[hh:mm:ss:SSS a] "];
+     NSString *dateString = [dateFormat stringFromDate:today];
     NSMutableString* tmp1 = [[NSMutableString alloc] initWithString: dateString];
     [tmp1 appendString: theString];
     NSString * tempString = [[NSString alloc] initWithFormat:@"%@\n", tmp1];

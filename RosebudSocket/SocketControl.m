@@ -23,7 +23,7 @@
 #define MAX_OUT_BYTES_SIZE  (256)
 
 
-//#define TELNET_SUPPORT  // Uncomment this if you want to use telnet instead of SMServe for debugging
+#define TELNET_SUPPORT  // Uncomment this if you want to use telnet instead of SMServe for debugging
 
 #ifdef TELNET_SUPPORT
 #define CRLF_TERMINATIONS
@@ -45,8 +45,6 @@
 		listenSocket = [[AsyncSocket alloc] initWithDelegate:self];
 		connectedSockets = [[NSMutableArray alloc] initWithCapacity:1];
         trace = ApplicationDelegate.trace;
-//        eaSessionController = ApplicationDelegate.eaSessionController;
-//        sendPacket = [[SendPacket alloc] init];
         // Advanced options - enable the socket to contine operations even during modal dialogs, and menu browsing
         [listenSocket setRunLoopModes:[NSArray arrayWithObject:NSRunLoopCommonModes]];
 		isRunning = NO;
@@ -54,6 +52,7 @@
                                                  selector:@selector(SocketDataReceived:)
                                                      name:@"SocketDataReceived"
                                                    object:nil];
+        [trace trace:@"SocketControl object created"];
 	}
 	return self;
 }
@@ -183,10 +182,10 @@
 	NSString *msg = [[NSString alloc] initWithData:strData encoding:NSUTF8StringEncoding];
 
     // Make sure we have an even number of characters
-    if ([msg length] % 2 > 0) {
-        [trace trace:@"(didReadData): String from SMServe did not have even number of characters"];
-        goto exit;
-    }
+//    if ([msg length] % 2 > 0) {
+//        [trace trace:@"(didReadData): String from SMServe did not have even number of characters"];
+//        goto exit;
+//    }
     
     if(msg)
 	{
@@ -257,11 +256,11 @@ exit:
 
 - (bool) incomingString2Bytes : (NSString*) inString :(u8*) outBytes
 {
-    // Make sure we have an even number of characters
-    if ([inString length]%2 > 0) {
-        [trace trace:@"(incomingString2Bytes): String from SMServe did not have even number of characters"];
-        return false;
-    }
+//    // Make sure we have an even number of characters
+//    if ([inString length]%2 > 0) {
+//        [trace trace:@"(incomingString2Bytes): String from SMServe did not have even number of characters"];
+//        return false;
+//    }
     
     NSString* tmpString = [[NSString alloc] initWithString:inString];
     // Convert to uppercase

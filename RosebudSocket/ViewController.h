@@ -7,9 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Trace.h"
+#import "SocketControl.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+    Trace* trace;
+    SocketControl* socketControl;
+}
+
+@property (nonatomic, strong) SocketControl* socketControl;
+@property (nonatomic, strong) Trace *trace;
+@property (strong, nonatomic) UIWindow *window;
 @property (weak, nonatomic) IBOutlet UILabel *labelVersion;
 @property (weak, nonatomic) IBOutlet UILabel *labelIPAddress;
+@property (weak, nonatomic) IBOutlet UITextView *textViewTrace;
 
 @end

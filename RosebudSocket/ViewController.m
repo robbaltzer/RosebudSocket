@@ -9,13 +9,14 @@
 #import <ifaddrs.h>
 #import <arpa/inet.h>
 #import "ViewController.h"
+#import "AppDelegate.h"
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
-@synthesize labelVersion, labelIPAddress;
+@synthesize labelVersion, labelIPAddress, socketControl, trace;
 
 - (void)viewDidLoad
 {
@@ -24,6 +25,12 @@
     
     [labelVersion setText:appVersion];
     [self.labelIPAddress setText:[self getIPAddress]];
+    trace = ApplicationDelegate.trace;
+    
+    [trace setTextView: self.textViewTrace];
+    [trace clear];
+    [trace update];
+    [trace trace:@"Trace up and running"];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

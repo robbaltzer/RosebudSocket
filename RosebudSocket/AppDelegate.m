@@ -16,9 +16,7 @@
     // Override point for customization after application launch.
     
     trace = [[Trace alloc] init];   // This should be the first object to create so all the later objects can use it
-//    eaSessionController = [[EASessionController alloc] init];
     socketControl = [[SocketControl alloc] init];
-//    packetHandler = [[PacketHandler alloc] init];
     return YES;
 }
 							

@@ -71,24 +71,13 @@
                     <connections>
                         <outlet property="labelIPAddress" destination="fLu-c5-6gM" id="L5a-M8-muI"/>
                         <outlet property="labelVersion" destination="IUD-Ar-dGZ" id="UGw-BR-rAj"/>
+                        <outlet property="textViewTrace" destination="gDM-kC-0x5" id="88i-Bs-U1E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="labelIPAddress" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="labelVersion" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

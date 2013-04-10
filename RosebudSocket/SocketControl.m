@@ -9,7 +9,9 @@
 #import "SocketControl.h"
 #import "AsyncSocket.h"
 #import "AppDelegate.h"
-#import "SendPacket.h"
+#import "PageData.h"
+
+//#import "SendPacket.h"
 
 #define WELCOME_MSG  0
 #define ECHO_MSG     1
@@ -43,8 +45,8 @@
 		listenSocket = [[AsyncSocket alloc] initWithDelegate:self];
 		connectedSockets = [[NSMutableArray alloc] initWithCapacity:1];
         trace = ApplicationDelegate.trace;
-        eaSessionController = ApplicationDelegate.eaSessionController;
-        sendPacket = [[SendPacket alloc] init];
+//        eaSessionController = ApplicationDelegate.eaSessionController;
+//        sendPacket = [[SendPacket alloc] init];
         // Advanced options - enable the socket to contine operations even during modal dialogs, and menu browsing
         [listenSocket setRunLoopModes:[NSArray arrayWithObject:NSRunLoopCommonModes]];
 		isRunning = NO;
@@ -195,17 +197,17 @@
 		[trace trace:@"Error converting received data into UTF-8 String"];
 	}
 	
-    u8 outBytes[MAX_OUT_BYTES_SIZE];
-    
+//    u8 outBytes[MAX_OUT_BYTES_SIZE];
+/*
     if (eaSessionController.sessionOpen) {
         if ([self incomingString2Bytes:msg :outBytes]) {
-            [sendPacket sendDataPacket:ParmSocket : cmdSend : 0 : [msg length]/2 : outBytes];
+//            [sendPacket sendDataPacket:ParmSocket : cmdSend : 0 : [msg length]/2 : outBytes];
         }
     }
     else {
         [trace trace:@"ERROR: EASession not open"];
     }
-    
+*/
 exit:
 #ifdef CRLF_TERMINATIONS
     [sock readDataToData:[AsyncSocket CRLFData] withTimeout:READ_TIMEOUT tag:0];

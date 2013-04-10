@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E58F92D17130343004933BF /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E58F92C17130343004933BF /* AsyncSocket.m */; };
 		3E58F93117130438004933BF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E58F93017130438004933BF /* CFNetwork.framework */; };
+		3EAA8D301715071E00A2B19E /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E58F92C17130343004933BF /* AsyncSocket.m */; };
+		3EAA8D311715072900A2B19E /* SocketControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E58F92F1713035D004933BF /* SocketControl.m */; };
+		3EAA8D341715085800A2B19E /* PageData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA8D331715085800A2B19E /* PageData.m */; };
+		3EAA8D35171508A300A2B19E /* Trace.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E58F92A171302FF004933BF /* Trace.m */; };
 		3ECD051617108EA100A47F57 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECD051517108EA100A47F57 /* UIKit.framework */; };
 		3ECD051817108EA100A47F57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECD051717108EA100A47F57 /* Foundation.framework */; };
 		3ECD051A17108EA100A47F57 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECD051917108EA100A47F57 /* CoreGraphics.framework */; };
@@ -30,6 +33,9 @@
 		3E58F92E1713035D004933BF /* SocketControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocketControl.h; sourceTree = "<group>"; };
 		3E58F92F1713035D004933BF /* SocketControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocketControl.m; sourceTree = "<group>"; };
 		3E58F93017130438004933BF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		3E58F93217132270004933BF /* Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
+		3EAA8D321715085800A2B19E /* PageData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageData.h; sourceTree = "<group>"; };
+		3EAA8D331715085800A2B19E /* PageData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageData.m; sourceTree = "<group>"; };
 		3ECD051217108EA100A47F57 /* RosebudSocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RosebudSocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ECD051517108EA100A47F57 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3ECD051717108EA100A47F57 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -94,18 +100,21 @@
 		3ECD051B17108EA100A47F57 /* RosebudSocket */ = {
 			isa = PBXGroup;
 			children = (
+				3EAA8D321715085800A2B19E /* PageData.h */,
+				3EAA8D331715085800A2B19E /* PageData.m */,
+				3ECD052417108EA100A47F57 /* AppDelegate.h */,
+				3ECD052517108EA100A47F57 /* AppDelegate.m */,
 				3E58F92B17130343004933BF /* AsyncSocket.h */,
 				3E58F92C17130343004933BF /* AsyncSocket.m */,
-				3ECD052417108EA100A47F57 /* AppDelegate.h */,
-				3E58F929171302FF004933BF /* Trace.h */,
-				3E58F92A171302FF004933BF /* Trace.m */,
-				3ECD052517108EA100A47F57 /* AppDelegate.m */,
+				3ECD052D17108EA100A47F57 /* MainStoryboard.storyboard */,
 				3E58F92E1713035D004933BF /* SocketControl.h */,
 				3E58F92F1713035D004933BF /* SocketControl.m */,
-				3ECD052D17108EA100A47F57 /* MainStoryboard.storyboard */,
+				3ECD051C17108EA100A47F57 /* Supporting Files */,
+				3E58F929171302FF004933BF /* Trace.h */,
+				3E58F92A171302FF004933BF /* Trace.m */,
+				3E58F93217132270004933BF /* Types.h */,
 				3ECD053017108EA100A47F57 /* ViewController.h */,
 				3ECD053117108EA100A47F57 /* ViewController.m */,
-				3ECD051C17108EA100A47F57 /* Supporting Files */,
 			);
 			path = RosebudSocket;
 			sourceTree = "<group>";
@@ -193,7 +202,10 @@
 				3ECD052217108EA100A47F57 /* main.m in Sources */,
 				3ECD052617108EA100A47F57 /* AppDelegate.m in Sources */,
 				3ECD053217108EA100A47F57 /* ViewController.m in Sources */,
-				3E58F92D17130343004933BF /* AsyncSocket.m in Sources */,
+				3EAA8D301715071E00A2B19E /* AsyncSocket.m in Sources */,
+				3EAA8D311715072900A2B19E /* SocketControl.m in Sources */,
+				3EAA8D341715085800A2B19E /* PageData.m in Sources */,
+				3EAA8D35171508A300A2B19E /* Trace.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

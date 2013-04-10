@@ -26,16 +26,53 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Version" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSf-Iy-I0a">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="x73-ul-EN8"/>
+                                    <constraint firstAttribute="width" constant="45" id="y5l-sR-Okf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="---" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUD-Ar-dGZ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="0FD-SU-eRZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="--.---.---.---" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLu-c5-6gM">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="xGw-tS-JOO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="IUD-Ar-dGZ" firstAttribute="leading" secondItem="GSf-Iy-I0a" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Bod-0B-WAp"/>
                             <constraint firstItem="gDM-kC-0x5" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="G1C-uG-VHn"/>
+                            <constraint firstItem="fLu-c5-6gM" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="HFW-3B-qgw"/>
+                            <constraint firstItem="GSf-Iy-I0a" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="OM8-LL-Kjq"/>
                             <constraint firstItem="gDM-kC-0x5" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="PGL-Hn-IQW"/>
                             <constraint firstItem="gDM-kC-0x5" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="POm-yS-csD"/>
-                            <constraint firstItem="jYi-2y-KLB" firstAttribute="centerX" secondItem="gDM-kC-0x5" secondAttribute="centerX" type="default" id="iNC-IJ-Fmv"/>
-                            <constraint firstItem="jYi-2y-KLB" firstAttribute="top" secondItem="3" secondAttribute="top" constant="7" id="qEh-CV-GYC"/>
+                            <constraint firstItem="jYi-2y-KLB" firstAttribute="leading" secondItem="fLu-c5-6gM" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="PpL-dO-lh3"/>
+                            <constraint firstItem="fLu-c5-6gM" firstAttribute="bottom" secondItem="jYi-2y-KLB" secondAttribute="bottom" type="default" id="RO3-Qv-Z8C"/>
+                            <constraint firstItem="IUD-Ar-dGZ" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="iAG-vA-Ojx"/>
+                            <constraint firstItem="IUD-Ar-dGZ" firstAttribute="baseline" secondItem="GSf-Iy-I0a" secondAttribute="baseline" type="default" id="iTl-8Z-Cqe"/>
+                            <constraint firstItem="jYi-2y-KLB" firstAttribute="centerX" secondItem="gDM-kC-0x5" secondAttribute="centerX" type="default" id="leH-4S-ttF"/>
+                            <constraint firstItem="GSf-Iy-I0a" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="109" id="sdG-e0-6hE"/>
+                            <constraint firstItem="jYi-2y-KLB" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="srG-Wr-Ucq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelIPAddress" destination="fLu-c5-6gM" id="L5a-M8-muI"/>
+                        <outlet property="labelVersion" destination="IUD-Ar-dGZ" id="UGw-BR-rAj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
@@ -47,6 +84,10 @@
         </class>
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="labelIPAddress" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelVersion" candidateClass="UILabel"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

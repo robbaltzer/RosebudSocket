@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *labelVersion;
+@property (weak, nonatomic) IBOutlet UILabel *labelIPAddress;
 
 @end

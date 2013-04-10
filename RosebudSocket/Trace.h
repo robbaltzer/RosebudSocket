@@ -19,7 +19,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "protocol_defs.h"
+#import "Types.h"
 
 #define FORMAT(format, ...) [NSString stringWithFormat:(format), ##__VA_ARGS__]
 

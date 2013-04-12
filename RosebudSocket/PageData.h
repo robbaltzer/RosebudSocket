@@ -11,7 +11,7 @@
 
 // Object class for storing 256 bytes of data
 @interface PageData : NSObject {
-    u8 data[256];
+    u8 data[PAYLOAD_SIZE];
     int len;
 }
 @property u8* bytes;

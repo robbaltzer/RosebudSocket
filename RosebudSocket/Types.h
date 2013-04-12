@@ -18,8 +18,8 @@
  * SOFTWARE.
  */
 
-//#ifndef __TYPES_H_
-//#define __PROTOCOL_DEFS_H_
+#ifndef __ROSEBUD_TYPES_H_
+#define __ROSEBUD_TYPES_H_
 
 //#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
 #define u8 uint8_t
@@ -28,6 +28,37 @@
 #define u16 uint16_t
 #define s32 int32_t
 #define u32 uint32_t
+
+#define PAYLOAD_SIZE   (1024)
+
+typedef enum {
+    START_BYTE = 0xA5,
+} START_BYTE_TYPE;
+
+typedef enum {
+    VISUAL_FRAME_PACKET,
+    THERMAL_FRAME_PACKET,
+    COMMAND_PACKET,
+} PACKET_TYPE;
+
+typedef struct {
+    START_BYTE_TYPE startByte;
+    PACKET_TYPE packetType;
+    u16 packetLen;
+    u8 parameter;
+    u8 command;        
+    s16 value;
+    u32 crc32;
+    u8 payload[PAYLOAD_SIZE];
+} RosebudPacket;
+
+
+
+#endif //__ROSEBUD_TYPES_H_
+
+
+
+
 /*
 #include "VersionInfo.h"
 

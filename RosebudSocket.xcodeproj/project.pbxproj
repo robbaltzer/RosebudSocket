@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E1350151716F7B60059B466 /* PacketHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1350141716F7B60059B466 /* PacketHandler.m */; };
+		3E1350181716F8100059B466 /* MyPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1350171716F8100059B466 /* MyPacket.m */; };
+		3E1BD13017184C09009354A7 /* SendPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1BD12F17184C09009354A7 /* SendPacket.m */; };
 		3E58F93117130438004933BF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E58F93017130438004933BF /* CFNetwork.framework */; };
 		3EAA8D301715071E00A2B19E /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E58F92C17130343004933BF /* AsyncSocket.m */; };
 		3EAA8D311715072900A2B19E /* SocketControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E58F92F1713035D004933BF /* SocketControl.m */; };
@@ -26,6 +29,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E1350131716F7B60059B466 /* PacketHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PacketHandler.h; sourceTree = "<group>"; };
+		3E1350141716F7B60059B466 /* PacketHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PacketHandler.m; sourceTree = "<group>"; };
+		3E1350161716F8100059B466 /* MyPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPacket.h; sourceTree = "<group>"; };
+		3E1350171716F8100059B466 /* MyPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPacket.m; sourceTree = "<group>"; };
+		3E1BD12E17184C09009354A7 /* SendPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendPacket.h; sourceTree = "<group>"; };
+		3E1BD12F17184C09009354A7 /* SendPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendPacket.m; sourceTree = "<group>"; };
 		3E58F929171302FF004933BF /* Trace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Trace.h; sourceTree = "<group>"; };
 		3E58F92A171302FF004933BF /* Trace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Trace.m; sourceTree = "<group>"; };
 		3E58F92B17130343004933BF /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
@@ -100,6 +109,12 @@
 		3ECD051B17108EA100A47F57 /* RosebudSocket */ = {
 			isa = PBXGroup;
 			children = (
+				3E1BD12E17184C09009354A7 /* SendPacket.h */,
+				3E1BD12F17184C09009354A7 /* SendPacket.m */,
+				3E1350161716F8100059B466 /* MyPacket.h */,
+				3E1350171716F8100059B466 /* MyPacket.m */,
+				3E1350131716F7B60059B466 /* PacketHandler.h */,
+				3E1350141716F7B60059B466 /* PacketHandler.m */,
 				3EAA8D321715085800A2B19E /* PageData.h */,
 				3EAA8D331715085800A2B19E /* PageData.m */,
 				3ECD052417108EA100A47F57 /* AppDelegate.h */,
@@ -206,6 +221,9 @@
 				3EAA8D311715072900A2B19E /* SocketControl.m in Sources */,
 				3EAA8D341715085800A2B19E /* PageData.m in Sources */,
 				3EAA8D35171508A300A2B19E /* Trace.m in Sources */,
+				3E1350151716F7B60059B466 /* PacketHandler.m in Sources */,
+				3E1350181716F8100059B466 /* MyPacket.m in Sources */,
+				3E1BD13017184C09009354A7 /* SendPacket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

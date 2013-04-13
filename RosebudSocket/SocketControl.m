@@ -1,10 +1,22 @@
-//
-//  SocketControl.m
-//  SMSocket
-//
-//  Created by Rob Baltzer on 1/16/13.
-//  Copyright (c) 2013 Rob Baltzer. All rights reserved.
-//
+/*
+ * Copyright 2013 by Rob Baltzer
+ *
+ *
+ * All Rights Reserved
+ *
+ *
+ * This file may not be modified, copied, or distributed in part or in whole
+ * without prior written consent from Rob Baltzer.
+ *
+ *
+ * ROB BALTZER DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING
+ * ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO EVENT SHALL
+ * ROB BALTZER BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR
+ * ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
+ * WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,
+ * ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS
+ * SOFTWARE.
+ */
 
 #import "SocketControl.h"
 #import "AsyncSocket.h"
@@ -158,7 +170,7 @@
     [sock readDataToData:[AsyncSocket CRLFData] withTimeout:READ_TIMEOUT tag:0];  // delimeter for telnet, good for debug
 #endif
 #ifdef NULL_TERMINATIONS
-    [sock readDataToData:[AsyncSocket ZeroData] withTimeout:READ_TIMEOUT tag:0];    // delimeter for logmon, smui, (Avnera tools in general)...
+    [sock readDataToData:[AsyncSocket ZeroData] withTimeout:READ_TIMEOUT tag:0];    // delimeter for logmon, smui, ( tools in general)...
 #endif
 }
 

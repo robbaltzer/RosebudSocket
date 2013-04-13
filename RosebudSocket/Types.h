@@ -1,17 +1,17 @@
 /*
- * Copyright 2012 Rob Baltzer
+ * Copyright 2013 by Rob Baltzer
  *
  *
  * All Rights Reserved
  *
  *
  * This file may not be modified, copied, or distributed in part or in whole
- * without prior written consent from Avnera Corporation.
+ * without prior written consent from Rob Baltzer.
  *
  *
- * AVNERA DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING
+ * ROB BALTZER DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING
  * ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO EVENT SHALL
- * AVNERA BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR
+ * ROB BALTZER BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR
  * ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
  * WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,
  * ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS
@@ -21,13 +21,14 @@
 #ifndef __ROSEBUD_TYPES_H_
 #define __ROSEBUD_TYPES_H_
 
-//#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
+#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
 #define u8 uint8_t
 #define s8 int8_t
 #define s16 int16_t
 #define u16 uint16_t
 #define s32 int32_t
 #define u32 uint32_t
+#endif
 
 #define PAYLOAD_SIZE   (1024)
 
@@ -36,9 +37,9 @@ typedef enum {
 } START_BYTE_TYPE;
 
 typedef enum {
-    VISUAL_FRAME_PACKET,
-    THERMAL_FRAME_PACKET,
-    COMMAND_PACKET,
+    VISUAL_FRAME_PACKET     = 0,
+    THERMAL_FRAME_PACKET    = 1,
+    COMMAND_PACKET          = 2,
 } PACKET_TYPE;
 
 typedef struct {

@@ -42,14 +42,23 @@ typedef enum {
     COMMAND_PACKET          = 2,
 } PACKET_TYPE;
 
+
+//  A group of Rosebud packets will make up a frame.
+//
+
 typedef struct {
+    
+    // Header
     START_BYTE_TYPE startByte;
     PACKET_TYPE packetType;
-    u16 packetLen;
+    u16 packetLen;                  // Length of entire packet including header
+    u16 packetNumber;               // Which packet in the group
     u8 parameter;
     u8 command;        
     s16 value;
-    u32 crc32;
+    u32 crc32;                      // CRC32 of entire packet with crc32 set to 0
+    
+    // Payload
     u8 payload[PAYLOAD_SIZE];
 } RosebudPacket;
 

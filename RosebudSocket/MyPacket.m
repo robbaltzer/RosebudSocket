@@ -22,6 +22,7 @@
 #import "AppDelegate.h"
 #import <zlib.h>
 
+/*
 @interface NSData (CRC32)
 - (uint32_t)CRC32Value;
 @end
@@ -34,6 +35,7 @@
     return crc;
 }
 @end
+*/
 
 @implementation MyPacket
 @synthesize theData;

@@ -12,9 +12,13 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rosebud Socket" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYi-2y-KLB">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rosebud Socket Server" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYi-2y-KLB">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="190" id="Kt9-hR-WFb"/>
+                                    <constraint firstAttribute="height" constant="24" id="hPv-Yh-Nra"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="[10:41 AM] 5 Packets Rx'd" translatesAutoresizingMaskIntoConstraints="NO" id="gDM-kC-0x5">
@@ -43,11 +47,10 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="--.---.---.---" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLu-c5-6gM">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="oar-VB-8mF"/>
                                     <constraint firstAttribute="width" constant="76" id="xGw-tS-JOO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.41519621410000002" green="0.75932716840000003" blue="0.1866376649" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Port: 8377" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XIo-RF-gWO">
@@ -56,7 +59,7 @@
                                     <constraint firstAttribute="width" constant="76" id="S8g-cs-771"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.94021739130000004" green="0.079529627010000006" blue="0.22437626820000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -66,17 +69,17 @@
                             <constraint firstItem="XIo-RF-gWO" firstAttribute="baseline" secondItem="GSf-Iy-I0a" secondAttribute="baseline" type="default" id="2fK-2x-HB9"/>
                             <constraint firstItem="XIo-RF-gWO" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="6iY-y8-Yw4"/>
                             <constraint firstItem="IUD-Ar-dGZ" firstAttribute="leading" secondItem="GSf-Iy-I0a" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Bod-0B-WAp"/>
+                            <constraint firstItem="jYi-2y-KLB" firstAttribute="baseline" secondItem="fLu-c5-6gM" secondAttribute="baseline" type="default" id="FZy-Mb-xaQ"/>
                             <constraint firstItem="gDM-kC-0x5" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="G1C-uG-VHn"/>
+                            <constraint firstItem="jYi-2y-KLB" firstAttribute="top" secondItem="3" secondAttribute="top" constant="1" id="Mta-ga-xjR"/>
                             <constraint firstItem="XIo-RF-gWO" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="NSt-8k-gzT"/>
                             <constraint firstItem="GSf-Iy-I0a" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="OM8-LL-Kjq"/>
+                            <constraint firstItem="jYi-2y-KLB" firstAttribute="centerX" secondItem="gDM-kC-0x5" secondAttribute="centerX" type="default" id="P2C-Sn-HVU"/>
                             <constraint firstItem="gDM-kC-0x5" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="PGL-Hn-IQW"/>
                             <constraint firstItem="gDM-kC-0x5" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="POm-yS-csD"/>
-                            <constraint firstItem="fLu-c5-6gM" firstAttribute="bottom" secondItem="jYi-2y-KLB" secondAttribute="bottom" type="default" id="YXZ-jM-XYt"/>
                             <constraint firstItem="IUD-Ar-dGZ" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="iAG-vA-Ojx"/>
                             <constraint firstItem="IUD-Ar-dGZ" firstAttribute="baseline" secondItem="GSf-Iy-I0a" secondAttribute="baseline" type="default" id="iTl-8Z-Cqe"/>
-                            <constraint firstItem="jYi-2y-KLB" firstAttribute="centerX" secondItem="gDM-kC-0x5" secondAttribute="centerX" type="default" id="leH-4S-ttF"/>
                             <constraint firstItem="GSf-Iy-I0a" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="109" id="sdG-e0-6hE"/>
-                            <constraint firstItem="jYi-2y-KLB" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="srG-Wr-Ucq"/>
                             <constraint firstItem="fLu-c5-6gM" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="9" id="w1s-wq-HvO"/>
                         </constraints>
                     </view>
@@ -90,6 +93,19 @@
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="labelIPAddress" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelVersion" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="textViewTrace" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

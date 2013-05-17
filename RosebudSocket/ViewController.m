@@ -35,6 +35,7 @@
     [trace trace:@"Trace up and running"];
     [socketControl setPort:DEFAULT_PORT];
     [socketControl rxStartServer];
+    ApplicationDelegate.socketMode = (SocketMode) self.switchTelnet.selectedSegmentIndex;
 }
 
 - (void)didReceiveMemoryWarning
@@ -75,4 +76,8 @@
     
 }
 
+- (IBAction)switchTelnet:(id)sender {
+        ApplicationDelegate.socketMode = (SocketMode) self.switchTelnet.selectedSegmentIndex;
+        NSLog(@"%d",self.switchTelnet.selectedSegmentIndex);
+}
 @end

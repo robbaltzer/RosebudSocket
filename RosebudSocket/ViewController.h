@@ -14,6 +14,7 @@
     Trace* trace;
     SocketControl* socketControl;
 }
+- (IBAction)switchTelnet:(id)sender;
 
 @property (nonatomic, strong) SocketControl* socketControl;
 @property (nonatomic, strong) Trace *trace;
@@ -21,5 +22,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelVersion;
 @property (weak, nonatomic) IBOutlet UILabel *labelIPAddress;
 @property (weak, nonatomic) IBOutlet UITextView *textViewTrace;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *switchTelnet;
 
 @end

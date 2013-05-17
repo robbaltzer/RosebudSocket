@@ -10,18 +10,21 @@
 #import "Trace.h"
 #import "SocketControl.h"
 
+typedef enum {
+    socketModeTelnet = 0,
+    socketModeBinary = 1,
+} SocketMode;
+
 #define ApplicationDelegate ((AppDelegate *)[UIApplication sharedApplication].delegate)
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate> {
     Trace* trace;
     SocketControl* socketControl;
+    SocketMode socketMode;
 }
 
 @property (nonatomic, strong) SocketControl* socketControl;
 @property (nonatomic, strong) Trace *trace;
-//@property (nonatomic, strong) EASessionController* eaSessionController;
-//@property (nonatomic, strong) PacketHandler* packetHandler;
-
 @property (strong, nonatomic) UIWindow *window;
-
+@property SocketMode socketMode;
 @end

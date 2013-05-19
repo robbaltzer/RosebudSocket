@@ -36,6 +36,33 @@
     [socketControl setPort:DEFAULT_PORT];
     [socketControl rxStartServer];
     ApplicationDelegate.socketMode = (SocketMode) self.switchTelnet.selectedSegmentIndex;
+
+    UIImageView *imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Icon-Small-50.png"]];
+    [self.MJPEGView addSubview:imgView];
+    
+    
+    webView = [[UIWebView alloc] initWithFrame:CGRectMake(0.0, 0.0, 640.0, 480.0)];
+    webView.userInteractionEnabled = NO;
+    CGFloat scaleRatio = self.MJPEGView.bounds.size.width / webView.bounds.size.width;
+    scaleRatio = 0.5F;
+    CGAffineTransform scalingTransform = CGAffineTransformScale(CGAffineTransformIdentity, scaleRatio, scaleRatio);
+    [webView setTransform:scalingTransform];
+    CGRect webFrame = webView.frame;
+    webFrame.origin.y = 0.0;
+    webFrame.origin.x = 0.0;
+    webView.frame = webFrame;
+    
+    NSURL *url = [NSURL URLWithString:@"http://204.248.124.202/mjpg/video.mjpg"];
+    
+    //    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    //    [webView loadRequest:request];
+    //    [self.MJPEGView addSubview:webView];
+    
+    //    webFrame.origin.y += webFrame.size.height;
+    imageView = [[MotionJpegImageView alloc] initWithFrame:webFrame];
+    imageView.url = url;
+    [self.MJPEGView addSubview:imageView];
+    [imageView play];
 }
 
 - (void)didReceiveMemoryWarning

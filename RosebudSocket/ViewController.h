@@ -9,10 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "Trace.h"
 #import "SocketControl.h"
+#import "MotionJpegImageView.h"
 
 @interface ViewController : UIViewController {
     Trace* trace;
     SocketControl* socketControl;
+    MotionJpegImageView *imageView;
+    UIWebView *webView;
 }
 - (IBAction)switchTelnet:(id)sender;
 
@@ -23,5 +26,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelIPAddress;
 @property (weak, nonatomic) IBOutlet UITextView *textViewTrace;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *switchTelnet;
+@property (strong, nonatomic) IBOutlet UIView *MainView;
+@property (weak, nonatomic) IBOutlet UIView *MJPEGView;
 
 @end

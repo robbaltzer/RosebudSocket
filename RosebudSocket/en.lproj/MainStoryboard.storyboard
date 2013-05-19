@@ -98,6 +98,23 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WYi-M4-TIL">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="MJPEG Stream 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHU-Rr-NTL">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="117" id="lFb-ju-dQK"/>
+                                    <constraint firstAttribute="height" constant="21" id="rf9-oM-HCN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="MJPEG Stream 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7z-Bg-1I4">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="117" id="D7J-ho-1bF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -105,18 +122,21 @@
                             <constraint firstItem="XIo-RF-gWO" firstAttribute="baseline" secondItem="GSf-Iy-I0a" secondAttribute="baseline" type="default" id="2fK-2x-HB9"/>
                             <constraint firstItem="eq5-xp-ois" firstAttribute="top" secondItem="3" secondAttribute="top" constant="406" id="2uT-S8-Dqb"/>
                             <constraint firstItem="WL8-gW-HxX" firstAttribute="top" secondItem="XIo-RF-gWO" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="3ae-pc-g8l"/>
-                            <constraint firstAttribute="trailing" secondItem="eq5-xp-ois" secondAttribute="trailing" constant="180" id="41a-Iu-Lhs"/>
                             <constraint firstItem="cPi-SS-td8" firstAttribute="leading" secondItem="jYi-2y-KLB" secondAttribute="leading" type="default" id="4Pb-Gu-NBU"/>
                             <constraint firstItem="XIo-RF-gWO" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="6iY-y8-Yw4"/>
                             <constraint firstAttribute="bottom" secondItem="eq5-xp-ois" secondAttribute="bottom" constant="49" id="7CQ-YN-DY3"/>
+                            <constraint firstItem="g7z-Bg-1I4" firstAttribute="baseline" secondItem="xHU-Rr-NTL" secondAttribute="baseline" type="default" id="BjF-bI-XgK"/>
                             <constraint firstItem="IUD-Ar-dGZ" firstAttribute="leading" secondItem="GSf-Iy-I0a" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Bod-0B-WAp"/>
                             <constraint firstItem="jYi-2y-KLB" firstAttribute="baseline" secondItem="fLu-c5-6gM" secondAttribute="baseline" type="default" id="FZy-Mb-xaQ"/>
                             <constraint firstItem="gDM-kC-0x5" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="G1C-uG-VHn"/>
                             <constraint firstItem="cPi-SS-td8" firstAttribute="top" secondItem="WL8-gW-HxX" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="G3m-qG-jRJ"/>
+                            <constraint firstItem="g7z-Bg-1I4" firstAttribute="top" secondItem="xHU-Rr-NTL" secondAttribute="top" type="default" id="K6y-MO-Ksr"/>
                             <constraint firstItem="XIo-RF-gWO" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="NSt-8k-gzT"/>
                             <constraint firstItem="GSf-Iy-I0a" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="OM8-LL-Kjq"/>
+                            <constraint firstAttribute="trailing" secondItem="eq5-xp-ois" secondAttribute="trailing" constant="105" id="Ow3-VE-Q4k"/>
                             <constraint firstItem="jYi-2y-KLB" firstAttribute="centerX" secondItem="gDM-kC-0x5" secondAttribute="centerX" type="default" id="P2C-Sn-HVU"/>
                             <constraint firstItem="gDM-kC-0x5" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="POm-yS-csD"/>
+                            <constraint firstItem="GSf-Iy-I0a" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="109" id="YrN-MZ-YUq"/>
                             <constraint firstItem="WL8-gW-HxX" firstAttribute="baseline" secondItem="cPi-SS-td8" secondAttribute="baseline" type="default" id="YvJ-fc-EKp"/>
                             <constraint firstItem="WYi-M4-TIL" firstAttribute="bottom" secondItem="eq5-xp-ois" secondAttribute="bottom" type="default" id="bCf-8U-6W6"/>
                             <constraint firstItem="eq5-xp-ois" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="bvo-lT-7N7"/>
@@ -126,9 +146,11 @@
                             <constraint firstItem="gDM-kC-0x5" firstAttribute="top" secondItem="cPi-SS-td8" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gsq-rL-ZyL"/>
                             <constraint firstItem="IUD-Ar-dGZ" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="iAG-vA-Ojx"/>
                             <constraint firstItem="IUD-Ar-dGZ" firstAttribute="baseline" secondItem="GSf-Iy-I0a" secondAttribute="baseline" type="default" id="iTl-8Z-Cqe"/>
-                            <constraint firstItem="WYi-M4-TIL" firstAttribute="top" secondItem="eq5-xp-ois" secondAttribute="top" type="default" id="rpH-ab-qso"/>
-                            <constraint firstItem="GSf-Iy-I0a" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="109" id="sdG-e0-6hE"/>
+                            <constraint firstItem="eq5-xp-ois" firstAttribute="top" secondItem="xHU-Rr-NTL" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="od5-05-6iT"/>
+                            <constraint firstItem="WYi-M4-TIL" firstAttribute="top" secondItem="g7z-Bg-1I4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="p33-8p-VQQ"/>
                             <constraint firstItem="fLu-c5-6gM" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="9" id="w1s-wq-HvO"/>
+                            <constraint firstItem="xHU-Rr-NTL" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="30" id="wgR-a9-Dzb"/>
+                            <constraint firstItem="g7z-Bg-1I4" firstAttribute="centerX" secondItem="WYi-M4-TIL" secondAttribute="centerX" type="default" id="wo4-VH-8ZD"/>
                         </constraints>
                     </view>
                     <connections>
@@ -199,6 +221,35 @@
             <point key="canvasLocation" x="934" y="68"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="MJPEGViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MJPEGViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="buttonExit:"/>
+                <relationship kind="outlet" name="MJPEGView1" candidateClass="UIView"/>
+                <relationship kind="outlet" name="MJPEGView2" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="MotionJpegImageView" superclassName="UIImageView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MotionJpegImageView.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="switchTelnet:"/>
+                <relationship kind="outlet" name="MJPEGView1" candidateClass="UIView"/>
+                <relationship kind="outlet" name="MJPEGView2" candidateClass="UIView"/>
+                <relationship kind="outlet" name="MainView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="labelIPAddress" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelVersion" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="switchTelnet" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="textViewTrace" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

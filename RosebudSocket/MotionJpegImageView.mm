@@ -50,7 +50,6 @@
 
 @property (nonatomic, readwrite, copy) NSString *username;
 @property (nonatomic, readwrite, copy) NSString *password;
-//@property (nonatomic, readwrite, assign) id<CredentialAlertDelegate> credentialDelegate;
 @property (nonatomic, retain) id<CredentialAlertDelegate> credentialDelegate;
 
 - (id)initWithDelegate:(id<CredentialAlertDelegate>)delegate 
@@ -73,7 +72,6 @@
 
 @dynamic username;
 @dynamic password;
-//@synthesize credentialDelegate = _credentialDelegate;
 @synthesize credentialDelegate;
 
 - (NSString *)username {
@@ -116,7 +114,6 @@
         _usernameField.returnKeyType = UIReturnKeyNext;
         _usernameField.clearButtonMode = UITextFieldViewModeUnlessEditing;
         [self addSubview:_usernameField];
-//        [_usernameField release];
         
         _passwordField = [[UITextField alloc] initWithFrame:CGRectZero];
         _passwordField.secureTextEntry = YES;
@@ -129,7 +126,6 @@
         _passwordField.returnKeyType = UIReturnKeyDone;
         _passwordField.clearButtonMode = UITextFieldViewModeUnlessEditing;
         [self addSubview:_passwordField];
-//        [_passwordField release];
     }
     
     return self;
@@ -336,23 +332,8 @@ static NSData *_endMarkerData = nil;
 
 - (void)dealloc {
     if (_connection) {
-//        [_connection cancel];
         [self cleanupConnection];
     }
-    
-//    if (_url) {
-//        [_url release];
-//    }
-//    
-//    if (_username) {
-//        [_username release];
-//    }
-//    
-//    if (_password) {
-//        [_password release];
-//    }
-    
-//    [super dealloc];
 }
 
 #pragma mark - Public Methods
@@ -387,12 +368,10 @@ static NSData *_endMarkerData = nil;
 
 - (void)cleanupConnection {
     if (_connection) {
-//        [_connection release];
         _connection = nil;
     }
     
     if (_receivedData) {
-//        [_receivedData release];
         _receivedData = nil;
     }
 }
@@ -401,7 +380,6 @@ static NSData *_endMarkerData = nil;
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
     if (_receivedData) {
-//        [_receivedData release];
     }
     
     _receivedData = [[NSMutableData alloc] init];
@@ -477,14 +455,11 @@ didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
 #pragma mark - CredentialAlertView Delegate Methods
 
 - (void)credentialAlertCancelled:(CredentialAlertView *)alert {
-//    [alert release];
 }
 
 - (void)credentialAlertSaved:(CredentialAlertView *)alert {
     self.username = alert.username;
     self.password = alert.password;
-//    [alert release];
-    
     [self play];
 }
 
